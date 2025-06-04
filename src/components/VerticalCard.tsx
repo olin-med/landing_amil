@@ -10,11 +10,11 @@ const VerticalCard: React.FC<VerticalCardProps> = ({ title, children }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded overflow-hidden shadow-sm">
+    <div className="bg-white rounded overflow-hidden shadow-sm hover:scale-[1.01] transition duration-100">
       {/* Header */}
       <button
         type="button"
-        className="w-full text-left font-bold px-4 py-3 font-medium text-white bg-[#00d896] cursor-pointer focus:outline-none"
+        className="w-full text-left font-bold px-4 py-3 text-white bg-[#00d896] cursor-pointer focus:outline-none"
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
       >
