@@ -11,44 +11,131 @@ import Footer from "./components/Footer"
 import familyBg from "/familia_sofa1.avif"
 import corporateBg from "/bgCorporate.avif"
 
+const CATEGORY_CARDS = [
+  {
+    title: "Amil Bronze",
+    imageUrl: "/health.avif",
+    content: (
+      <p>
+        Abrangência: capital. Não possui reembolso.
+      </p>
+    ),
+  },
+  {
+    title: "Amil Bronze Mais",
+    imageUrl: "/health2.avif",
+    content: (
+      <p>
+        Abrangência: interior e litoral. Não possui reembolso.
+      </p>
+    ),
+  },
+  {
+    title: "Amil Prata",
+    imageUrl: "/familia1.avif",
+    content: (
+      <p>
+        Abrangência nacional com excelente custo-benefício. A partir do Prata já inclui reembolso.
+      </p>
+    ),
+  },
+  {
+    title: "Amil Ouro",
+    imageUrl: "/health1.avif",
+    content: (
+      <p>
+        Cobertura com alguns hospitais de primeira linha. Possui reembolso.
+      </p>
+    ),
+  },
+  {
+    title: "Amil Platinum",
+    imageUrl: "/running.avif",
+    content: (
+      <p>
+        Rede top de hospitais e clínicas. Possui reembolso.
+      </p>
+    ),
+  },
+  {
+    title: "Amil Platinum Mais",
+    imageUrl: "/plus.avif",
+    content: (
+      <p>
+        Rede top com acesso ao Sírio-Libanês e Laboratório Alta. Possui reembolso.
+      </p>
+    ),
+  },
+  {
+    title: "Amil Black",
+    imageUrl: "/pro.avif",
+    content: (
+      <p>
+        Rede top completa. Possui reembolso.
+      </p>
+    ),
+  },
+]
+
 const PRODUCT_CARDS = [
   {
-    title: "Amil Fácil",
+    title: "Amil Bronze",
     content: (
-      <p className="text-gray-700">
-        Planos médicos com abrangência nacional ou regional, oferecendo a opção de
-        coparticipação e de reembolso.
+      <p className="text-black">
+        Plano com abrangência na capital. Não contempla reembolso.
       </p>
     ),
   },
   {
-    title: "Amil",
+    title: "Amil Bronze Mais",
     content: (
-      <p className="text-gray-700">
-        Criada com os conceitos de simplicidade, eficiência e cuidado, a Amil
-        oferece planos regionais com excelente custo-benefício.
+      <p className="text-black">
+        Plano com abrangência no interior e litoral. Não contempla reembolso.
       </p>
     ),
   },
   {
-    title: "Amil One",
+    title: "Amil Prata",
     content: (
-      <p className="text-gray-700">
-        Líder no segmento <em>premium</em>, a Amil One alia conveniência e
-        exclusividade para entregar a melhor experiência em saúde e bem-estar.
+      <p className="text-black">
+        Abrangência nacional com excelente custo-benefício. Inclui reembolso.
       </p>
     ),
   },
   {
-    title: "Amil Dental",
+    title: "Amil Ouro",
     content: (
-      <p className="text-gray-700">
-        Os melhores planos e profissionais mais capacitados para você, sua família
-        ou empresa a um preço que cabe no seu bolso.
+      <p className="text-black">
+        Cobertura em hospitais de padrão elevado. Inclui reembolso.
       </p>
     ),
   },
-];
+  {
+    title: "Amil Platinum",
+    content: (
+      <p className="text-black">
+        Rede de hospitais de alta qualidade. Inclui reembolso.
+      </p>
+    ),
+  },
+  {
+    title: "Amil Platinum Mais",
+    content: (
+      <p className="text-black">
+        Acesso a hospitais de referência, como Sírio-Libanês e Laboratório Alta. Inclui reembolso.
+      </p>
+    ),
+  },
+  {
+    title: "Amil Black",
+    content: (
+      <p className="text-black">
+        Rede completa de hospitais e clínicas de excelência. Inclui reembolso.
+      </p>
+    ),
+  },
+]
+
 
 function App() {
   return (
@@ -69,7 +156,7 @@ function App() {
         >
           <div className="text-white text-3xl md:text-4xl font-bold text-center leading-tight">
             <p className="text-[#3d1cff]">Amil,</p>
-            Execência e preço justo
+            Excelência e preço justo
             <p className="mt-4 text-base md:text-lg font-normal opacity-80">
               Seu caminho para proteção completa
             </p>
@@ -91,7 +178,7 @@ function App() {
       >
         <div className="text-white text-3xl md:text-4xl lg:text-6xl font-bold text-center lg:text-right leading-tight">
           <p className="text-[#3d1cff]">Amil,</p>
-          Execência e preço justo
+          Excelência e preço justo
           <p className="mt-4 text-base md:text-lg lg:text-2xl font-normal opacity-80 text-center lg:text-right">
             Seu caminho para proteção completa
           </p>
@@ -104,8 +191,6 @@ function App() {
           value=""
         />
       </PageContainer>
-
-      
 
       {/* BENEFITS */}
       <PageContainer
@@ -120,8 +205,8 @@ function App() {
         "
       >
         <div className="text-base md:text-lg lg:text-xl lg:text-right text-black">
-          Quer Marcar Consultas ou dúvidas sobre seu plano atual? <br className="hidden lg:block" />
-          Já é Cliente?
+          Quer marcar consultas ou dúvidas sobre seu plano atual? <br className="hidden lg:block" />
+          Já é cliente?
         </div>
         <Button
           id="submit"
@@ -150,7 +235,7 @@ function App() {
           backgroundColor: "#3d1cff66",
           backgroundBlendMode: "overlay",
         }}
-      > 
+      >
         <FormButton
           mobileScrollTargetId="home2"
           desktopScrollTargetId="home"
@@ -159,7 +244,7 @@ function App() {
           Solicitar Cotação
         </FormButton>
         <div className="text-white space-y-2 text-base md:text-lg lg:text-xl">
-          <div>Não é Cliente?</div>
+          <div>Não é cliente?</div>
           <div>Quer saber mais sobre nossos planos?</div>
         </div>
       </PageContainer>
@@ -173,30 +258,17 @@ function App() {
           Nossas Categorias de Planos
         </h2>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          <CategoryCard id="category1" mobileScrollTargetId="home2" desktopScrollTargetId="home" title="Amil Fácil" imageUrl="/health.avif">
-            <p>
-              Planos médicos com abrangência nacional ou regional, oferecendo a opção de
-              coparticipação e de reembolso.
-            </p>
-          </CategoryCard>
-          <CategoryCard id="category2" mobileScrollTargetId="home2" desktopScrollTargetId="home" title="Amil" imageUrl="/health2.avif">
-            <p>
-              Criada com os conceitos de simplicidade, eficiência e cuidado, a Amil Fácil
-              oferece planos regionais com excelente custo-benefício.
-            </p>
-          </CategoryCard>
-          <CategoryCard id="category3" mobileScrollTargetId="home2" desktopScrollTargetId="home" title="Amil One" imageUrl="/familia1.avif">
-            <p>
-              Líder no segmento <em>premium</em>, a Amil One alia conveniência e
-              exclusividade para entregar a melhor experiência em saúde e bem-estar.
-            </p>
-          </CategoryCard>
-          <CategoryCard id="category4" mobileScrollTargetId="home2" desktopScrollTargetId="home" title="Amil Dental" imageUrl="/health1.avif">
-            <p>
-              Os melhores planos e profissionais mais capacitados para você, sua família
-              ou empresa a um preço que cabe no seu bolso.
-            </p>
-          </CategoryCard>
+          {CATEGORY_CARDS.map(({ title, imageUrl, content }) => (
+            <CategoryCard
+              key={title}
+              title={title}
+              imageUrl={imageUrl}
+              mobileScrollTargetId="home2"
+              desktopScrollTargetId="home"
+            >
+              {content}
+            </CategoryCard>
+          ))}
         </div>
       </PageContainer>
 
@@ -227,6 +299,7 @@ function App() {
           </div>
         </div>
       </PageContainer>
+
       {/* ─── MOBILE FORM ─── */}
       <PageContainer id="home2" className="block lg:hidden bg-gray-200">
         <div className="px-4 pb-16">
