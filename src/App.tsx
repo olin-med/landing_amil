@@ -81,49 +81,70 @@ const PRODUCT_CARDS = [
   {
     title: "Amil Bronze",
     content: (
-      <p className="text-black">
-        Plano com abrangência na capital. Não contempla reembolso.
-      </p>
+      <ul>
+        Abrangência: capital. Não possui reembolso.<br/>
+        Acesso aos hospitais:
+      
+          <li>- Hospital Vitória</li>
+          <li>- Hospital Metropolitano</li>
+          <li>- Hospital Luz Santo Amaro</li>
+      </ul>
     ),
   },
   {
     title: "Amil Bronze Mais",
     content: (
-      <p className="text-black">
-        Plano com abrangência no interior e litoral. Não contempla reembolso.
-      </p>
+      <ul>
+        Abrangência: capital, interior e litoral. Não possui reembolso.<br/>
+        Acesso aos hospitais:
+      
+          <li>- Hospital Vitória</li>
+          <li>- Hospital Metropolitano</li>
+          <li>- Hospital Luz Santo Amaro</li>
+      </ul>
     ),
   },
   {
     title: "Amil Prata",
     content: (
-      <p className="text-black">
+      <ul className="text-black">
         Abrangência nacional com excelente custo-benefício. Inclui reembolso.
-      </p>
+        Acesso aos hospitais:
+      
+          <li>- Hospital Leforte</li>
+          <li>- Hospital Samaritano</li>
+          <li>- Hospital Nipo-Brasileiro</li>
+      </ul>
     ),
   },
   {
     title: "Amil Ouro",
     content: (
-      <p className="text-black">
+      <ul className="text-black">
         Cobertura em hospitais de padrão elevado. Inclui reembolso.
-      </p>
+        <li>- Hospital Santa Catarina</li>
+        <li>- Todos os Hospitais São Camilo</li>
+      </ul>
     ),
   },
   {
     title: "Amil Platinum",
     content: (
-      <p className="text-black">
+      <ul className="text-black">
         Rede de hospitais de alta qualidade. Inclui reembolso.
-      </p>
+        <li>- Hospital Oswaldo Cruz Paulista</li>
+        <li>- HCor</li>
+      </ul>
     ),
   },
   {
     title: "Amil Platinum Mais",
     content: (
-      <p className="text-black">
+      <ul className="text-black">
         Acesso a hospitais de referência, como Sírio-Libanês e Laboratório Alta. Inclui reembolso.
-      </p>
+        <li>- Hospital Sírio Libanês</li>
+        <li>- Laboratório Alta</li>
+      </ul>
     ),
   },
   {
